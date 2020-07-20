@@ -1,0 +1,33 @@
+name:                convio
+version:             0.1.0.0
+github:              "davidgarland/convio"
+license:             MIT
+author:              "David Garland"
+maintainer:          "davidrgarland@me.com"
+copyright:           "2020 David Garland"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+synopsis:            An unsafe abstraction over IO and ST.
+category:            Control
+
+description:         Please see the README on GitHub at <https://github.com/davidgarland/convio>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+tests:
+  convio-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - convio
